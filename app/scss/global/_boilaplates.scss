@@ -1,0 +1,213 @@
+@use '../util/' as u;
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+ul {
+  list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  // max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+//my styles starts here...
+body {
+  font-family: 'Rubik', sans-serif;
+  color: var(--white);
+  font-size: u.rem(16);
+  color: #212123;
+  line-height: 1.75rem;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: var(--primary-clr-700);
+}
+//flexbox styles
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-jc-fs {
+    justify-content: flex-start;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-direction-c {
+    flex-direction: column;
+  }
+  &-ai-fd {
+    align-items: flex-end;
+  }
+}
+//breakpoints class
+.hide-for-mobile {
+  //hide for tablet and mobile devices
+  @include u.breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop-m {
+  @include u.breakpoint-up(mediumSm) {
+    display: none;
+  }
+}
+.hide-for-mobile-m {
+  @include u.breakpoint-down(mediumSm) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  //hide for desktop viewport widths
+  @include u.breakpoint-up(large) {
+    display: none;
+  }
+}
+.wrapper {
+  margin-inline: auto;
+  max-width: u.rem(1200);
+}
+.sub-nav-link {
+  background: transparent;
+  border: none;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: var(--icon-clr-200);
+  }
+}
+
+.main-nav-item {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+.main-nav-item-right {
+  margin-right: u.rem(16);
+}
+
+.nav-sub-link-container {
+  padding-right: u.rem(10);
+  padding-bottom: u.rem(10);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  background-color: var(--primary-clr-700);
+  color: var(--white) !important;
+  font-size: var(--font-m);
+  padding-block: u.rem(10);
+  padding-inline: u.rem(12);
+  border-radius: u.rem(8);
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+.button--compact {
+  font-size: var(--font-sm);
+  color: var(--white) !important;
+  display: inline-block;
+}
+.pad-viewport {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.new-box-container {
+  background: linear-gradient(to left, hsl(24, 100%, 49%), hsl(239, 100%, 67%));
+  font-size: var(--font-sm);
+  padding-block: u.rem(1);
+  padding-inline: u.rem(4);
+  margin-left: u.rem(-20);
+  border-radius: 10px;
+  color: var(--primary-clr-700);
+}
+.circle-two-container {
+  padding-block: u.rem(6);
+  padding-inline: u.rem(10);
+  color: var(--primary-clr-700);
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: var(--font-sm);
+  border-radius: 50%;
+  margin-left: u.rem(-10);
+}

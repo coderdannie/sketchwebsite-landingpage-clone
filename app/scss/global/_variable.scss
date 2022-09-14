@@ -1,0 +1,22 @@
+@use '../util/' as u;
+:root {
+  --white: hsl(0, 0%, 100%);
+  --primary-clr-700: hsl(0, 0%, 0%);
+  --primary-clr: hsl(0, 0%, 14%);
+  --primary-clr-accent: hsl(240, 27%, 97%);
+  --icon-clr-200: rgba(0, 0, 0, 0.32);
+  --text-clr: hsl(240, 3%, 13%);
+  --footer-clr: rgba(0, 0, 0, 0.7);
+  //font-weight
+  --fw-s: 300;
+  --fw-s-400: 400;
+  --fw-s-500: 500;
+  --fw-600: 600;
+  --fw-ml-700: 700;
+  --fw-l-800: 800;
+  --fw-xl-900: 900;
+  //font-sizes
+  --font-sm: 0.875rem;
+  --font-m: 1rem;
+  --font-p-l: 1.5rem;
+}

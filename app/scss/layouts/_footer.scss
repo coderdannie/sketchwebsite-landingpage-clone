@@ -1,0 +1,45 @@
+@use '../util/' as u;
+.main-footer {
+  color: var(--footer-clr);
+  line-height: 1.25;
+  font-weight: var(--fw-s);
+  &__content {
+    border-top: solid 1px rgba(0, 0, 0, 0.1);
+  }
+  &__nav {
+    @include u.breakpoint-up(mediumSm) {
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      column-gap: 1.5rem;
+    }
+    @include u.breakpoint-up(large) {
+      grid-template-columns: repeat(auto-fit, minmax(10.625rem, 1fr));
+    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    column-gap: u.rem(12);
+    row-gap: u.rem(32);
+    padding-top: u.rem(40);
+    padding-bottom: u.rem(32);
+  }
+  &__nav-heading {
+    color: var(--text-clr);
+    font-weight: var(--fw-s-500);
+    margin-bottom: 0.5rem;
+  }
+  &__new-box-container {
+    margin-left: u.rem(6);
+  }
+  &__nav-links {
+    display: inline-flex;
+    align-items: center;
+    color: hsla(0, 0%, 0%, 0.64);
+    line-height: 1.5rem;
+    font-weight: var(--fw-s-400);
+    margin-bottom: 0.5rem;
+  }
+  &__nav-item-badge {
+    padding-block: u.rem(1);
+    margin-left: u.rem(6);
+    padding-inline: u.rem(8);
+  }
+}

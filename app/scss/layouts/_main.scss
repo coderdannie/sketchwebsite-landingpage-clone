@@ -1,0 +1,239 @@
+@use '../util/' as u;
+main {
+  color: var(--primary-clr-700);
+  position: relative;
+  overflow-x: hidden;
+  .app {
+    @include u.breakpoint-up(mediumSm) {
+      padding-top: 6rem;
+      row-gap: 4rem;
+      margin-bottom: 6rem;
+    }
+    @include u.breakpoint-up(large) {
+      grid-template-columns: repeat(12, 1fr);
+      column-gap: 1.5rem;
+      row-gap: 6rem;
+    }
+    display: grid;
+    row-gap: 3rem;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+    &__background {
+      width: 100vw;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -500;
+      overflow: hidden;
+    }
+    &__background img {
+      @include u.breakpoint-up(medium) {
+        top: 15rem;
+      }
+      @include u.breakpoint-up(mediumSm) {
+        top: calc(20vw);
+      }
+      @include u.breakpoint-up(large) {
+        top: 18rem;
+      }
+      width: 120rem;
+      height: u.rem(1000);
+      object-fit: cover;
+      object-position: center;
+      position: absolute;
+      top: 20rem;
+      left: calc(-60rem + 50vw);
+    }
+  }
+  .hero {
+    color: var(--text-clr);
+    text-align: center;
+    @include u.breakpoint-up(large) {
+      grid-column: 2 / span 10;
+    }
+    @include u.breakpoint-down(large) {
+      padding-left: 2.7rem;
+      padding-right: 2.7rem;
+    }
+    gap: u.rem(24);
+    &__heading {
+      @include u.breakpoint-up(medium) {
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        letter-spacing: -1.5px;
+      }
+      @include u.breakpoint-up(large) {
+        font-size: u.rem(76);
+        line-height: 4.75rem;
+      }
+      font-weight: var(--fw-ml-700);
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+      letter-spacing: -0.5px;
+    }
+    &__heading > span {
+      position: relative;
+      display: inline-block;
+      animation: waivy 2.5s;
+      animation-delay: calc(0.1s * var(--i));
+    }
+    &__lead {
+      @include u.breakpoint-up(large) {
+        font-size: var(--font-p-l);
+      }
+      font-size: u.rem(20);
+    }
+  }
+  .app-boxes {
+    @supports (
+      (-webkit-backdrop-filter: blur(1px)) and (backdrop-filter: blur(1px))
+    ) {
+      backdrop-filter: blur(40px);
+    }
+    border-radius: u.rem(12);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.64);
+    backdrop-filter: blur(40px);
+    @include u.breakpoint-up(large) {
+      grid-row: 2;
+      grid-column: 1 / span 12;
+    }
+
+    .app-box {
+      position: relative;
+      padding-top: 2.5rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      @include u.breakpoint-up(mediumSm) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: u.rem(24);
+        padding-top: 0;
+      }
+
+      margin-bottom: 1.5rem;
+      &__inner {
+        @include u.breakpoint-down(medium) {
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          margin-bottom: 1.5rem;
+        }
+        @include u.breakpoint-up(medium) {
+          grid-column: 2;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+          padding-top: 2.5rem;
+          padding-bottom: 2.5rem;
+          margin-bottom: 0;
+        }
+        @include u.breakpoint-up(large) {
+          padding-left: 2rem;
+          padding-right: 2rem;
+          padding-top: 3.5rem;
+          padding-bottom: 3.5rem;
+        }
+      }
+      &__inner--web-app {
+        grid-column: 1;
+      }
+      &__figure-web-app {
+        grid-column: 2;
+      }
+      &__label {
+        display: inline-block;
+        font-size: u.rem(11);
+        line-height: 0;
+        padding: u.rem(12) u.rem(8);
+        color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.08);
+        text-transform: uppercase;
+        font-weight: var(--fw-s-400);
+        border-radius: u.rem(6);
+        margin-bottom: u.rem(16);
+      }
+      &__heading {
+        @include u.breakpoint-up(large) {
+          font-size: 2rem;
+          line-height: 2.5rem;
+        }
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 2rem;
+        letter-spacing: -0.5px;
+        margin-bottom: 0.25rem;
+        color: #212123;
+      }
+      &__details {
+        @include u.breakpoint-up(large) {
+          font-size: 1.25rem;
+          line-height: 1.75rem;
+        }
+        margin-bottom: 1.25rem;
+      }
+      &__cta {
+        @include u.breakpoint-down(large) {
+          line-height: 1.25;
+          min-height: 3rem;
+          padding: u.rem(11) 0.6875rem;
+          font-size: var(--font-sm);
+          font-weight: var(--fw-s-500);
+        }
+      }
+      &__links {
+        margin-top: u.rem(16);
+      }
+      &__links-item {
+        &:first-child {
+          &::after {
+            content: '·';
+            margin-inline: u.rem(8);
+          }
+        }
+      }
+      &__link {
+        font-size: var(--font-sm);
+        line-height: u.rem(21);
+        font-weight: var(--fw-s-500);
+        color: #212123;
+      }
+      &__hint {
+        font-size: var(--font-sm);
+        line-height: 1.3125rem;
+        color: rgba(0, 0, 0, 0.48);
+        margin-top: 1rem;
+        font-weight: 400;
+      }
+      &__figure {
+        grid-row: 1;
+      }
+      &__figure img {
+        @include u.breakpoint-up(medium) {
+          display: none;
+        }
+        width: 100%;
+        max-width: 100%;
+      }
+      &__image-desktop {
+        display: none;
+
+        @include u.breakpoint-up(mediumSm) {
+          height: 18.25rem;
+        }
+        @include u.breakpoint-up(large) {
+          height: 94%;
+        }
+        @include u.breakpoint-up(medium) {
+          display: block !important;
+          object-fit: cover;
+          object-position: top right;
+        }
+      }
+    }
+    .app-box__ios {
+      margin-bottom: 0;
+    }
+  }
+}

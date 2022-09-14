@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/style.css" />
+  </head>
+  <body>
+    <a href="" class="ribbon">
+      <div class="ribbon__wrapper">
+        <div class="ribbon__content flex flex-jc-c flex-ai-c">
+          <span class="ribbon__icon">
+            <i class="fa fa-book" aria-hidden="true"></i>
+          </span>
+          <span class="ribbon__message">
+            Get started in sketch today with our new Sketch 101 course
+          </span>
+          <span class="ribbon__arrow">
+            <i
+              class="fa fa-long-arrow-right ribbon__long-arrow"
+              aria-hidden="true"
+            ></i>
+          </span>
+        </div>
+      </div>
+    </a>
+    <header class="header">
+      <nav class="header__nav flex flex-ai-c flex-jc-sb wrapper">
+        <div class="header__nav-container">
+          <div class="overlay has-fade hide-for-desktop-m"></div>
+          <!-- moblie dropdown menu starts from here -->
+          <div class="header__nav-bar flex flex-jc-sb flex-ai-c hide-for-desktop-m">
+            <!-- toggle bar FOR MOBILE -->
+            <div id="toggleBar" class="header__toggle-bar">
+              <span></span>
+              <span></span>
+            </div>
+            <div class="header__logo">
+              <a class="header__nav-logo-link" href="#">
+                <span class="header__logo-shape"> </span>
+                <span class="header__logo-name">Sketch</span>
+              </a>
+            </div>
+            <div class="header__nav-bar-link">
+              <a class="header__main-link" href="#">Sign In</a>
+            </div>
+          </div>
+          <div id="headerNav" class="header__nav-bar-sub-menu action">
+            <ul class="hide-for-desktop-m">
+              <li class="main-nav-item nav-bar-list">
+                <div class="header__sub-menu-flex flex flex-jc-sb flex-ai-c">
+                  <button class="sub-nav-link">Product</button>
+                  <div class="header__nav-link-arrow">
+                    <img src="images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <ul class="nav-sub-link-ul open hide-for-desktop-m">
+                  <li class="nav-sub-links">
+                    <a href="#">Design</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Prototype</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Collaborate</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Developer Handoff</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Workspaces</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Extension</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Updates</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav-item nav-bar-list">
+                <div class="header__sub-menu-flex flex flex-jc-sb flex-ai-c">
+                  <button class="sub-nav-link">Learn</button>
+                  <div class="header__nav-link-arrow">
+                    <img src="images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <ul class="nav-sub-link-ul open hide-for-desktop-m">
+                  <li class="nav-sub-links">
+                    <a href="#">Blog</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Course Sketch: 101</a>
+                    <span class="new-box-container box-mobile">New</span>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Documentation</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Events & Meetups</a>
+                    <span class="circle-two-container box-mobile">2</span>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Newsletter</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Research Labs</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav-item nav-bar-list app-link">
+                <a class="flex" href="#">Apps</a>
+              </li>
+              <li class="main-nav-item nav-bar-list">
+                <a class="flex " href="#">Pricing</a>
+              </li>
+              <li class="main-nav-item nav-bar-list">
+                <div class="header__sub-menu-flex flex flex-jc-sb flex-ai-c">
+                  <button class="sub-nav-link">Suport</button>
+                  <div class="header__nav-link-arrow">
+                    <img src="images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </div>
+                <ul class="nav-sub-link-ul open hide-for-desktop-m">
+                  <li class="nav-sub-links">
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Help Center</a>
+                  </li>
+                  <li class="nav-sub-links">
+                    <a href="#">Service Startups</a>
+                  </li>
+                </ul>
+                 <li class="main-nav-item">
+              <a class="button flex flex-jc-c" href="#"
+                >Get Started For Free</a
+              >
+            </li>
+              </li>
+            </ul>
+          </div>
+          <div class="header__nav-menu hide-for-mobile-m">
+            <ul class="header__nav-menu-dropdown-pages flex">
+              <div class="header__logo">
+                <a class="header__nav-logo-link" href="#">
+                  <span class="header__logo-shape"> </span>
+                  <span class="header__logo-name">Sketch</span>
+                </a>
+              </div>
+              <li class="main-nav-item main-nav-hover">
+                <button class="sub-nav-link flex flex-ai-c">
+                  Product
+                  <div class="header__nav-link-arrow">
+                    <img src="images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </button>
+                <ul class="header__main-sub-menu">
+                  <div class="nav-sub-link-container">
+                    <li class="header__main-sub-links">
+                      <a href="#">Design</a>
+                    </li>
+                    <li class="header__main-sub-links">
+                      <a href="#">Prototype</a>
+                    </li>
+                    <li class="header__main-sub-links">
+                      <a href="#">Collaborate</a>
+                    </li>
+                    <li class="header__main-sub-links">
+                      <a href="#">Developer Handoff</a>
+                    </li>
+                    <li class="header__main-sub-links">
+                      <a href="#">Workspaces</a>
+                    </li>
+                  </div>
+                  <li class="header__main-sub-links">
+                    <a href="#">Extension</a>
+                  </li>
+                  <li class="header__main-sub-links">
+                    <a href="#">Updates</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav-item main-nav-hover">
+                <button class="sub-nav-link flex flex-ai-c">
+                  Learn
+                  <div class="header__nav-link-arrow">
+                    <img src="images/icon-arrow-down.svg" alt="" />
+                  </div>
+                </button>
+                <ul class="header__main-sub-menu header__main-sub-menu-two">
+                  <div class="nav-sub-link-container">
+                    <li class="header__main-sub-links">
+                      <a href="#">Blog</a>
+                    </li>
+
+                    <li class="header__main-sub-links">
+                      <a href="#">Course Sketch: 101</a>
+                      <span class="new-box-container">New</span>
+                    </li>
+
+                    <li class="header__main-sub-links">
+                      <a href="#">Documentation</a>
+                    </li>
+                    <li class="header__main-sub-links">
+                      <a href="#">Events & Meetups</a>
+                      <span class="circle-two-container">2</span>
+                    </li>
+                  </div>
+                  <li class="header__main-sub-links">
+                    <a href="#">Newsletter</a>
+                  </li>
+                  <li class="header__main-sub-links">
+                    <a href="#">Research Labs</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="main-nav-item">
+                <a class="header__main-link flex" href="#">Apps</a>
+              </li>
+              <li class="main-nav-item">
+                <a class="header__main-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__nav-main-menu-auth hide-for-mobile-m">
+          <ul class="header__nav-main-menu-actions flex flex-ai-c">
+            <li class="main-nav-item main-nav-item-right main-nav-hover">
+              <button class="sub-nav-link flex flex-ai-c">
+                Support
+                <div class="header__nav-link-arrow">
+                  <img src="images/icon-arrow-down.svg" alt="" />
+                </div>
+              </button>
+              <ul class="header__main-sub-menu header__main-sub-menu-three">
+                <div class="nav-sub-link-container">
+                  <li class="header__main-sub-links">
+                    <a href="#">Contact Us</a>
+                  </li>
+                  <li class="header__main-sub-links">
+                    <a href="#">Help Center</a>
+                  </li>
+                  <li class="header__main-sub-links">
+                    <a href="#">Service Startups</a>
+                  </li>
+                </div>
+              </ul>
+            </li>
+            <span class="header__nav-divider"> </span>
+            <li class="main-nav-item main-nav-item-right">
+              <a class="header__main-link" href="#">Sign In</a>
+            </li>
+            <li class="main-nav-item">
+              <a class="button button--compact" href="#"
+                >Get Started For Free</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="pad-viewport">
+        <div class="app wrapper">
+          <div class="app__background">
+            <img src="images/page-background@2x.avif" alt="">
+          </div>
+          <div class="hero flex flex-direction-c">
+            <h1 class="hero__heading">
+              <span style="--i:1">Every</span>
+              <span style="--i:2">hero</span>
+              <span style="--i:3">needs</span>
+              <span style="--i:4">a</span>
+              <span style="--i:5">sidekick.</span>
+              <span style="--i:6">We</span>
+              <span style="--i:7">have</span>
+              <span style="--i:8">two.</span>
+            </h1>
+            <p class="hero__lead">
+              Create with our award-winning macOS app, share your projects in the browser (on any platform), and take Sketch with you. 
+            </p>
+          </div>
+          <div class="app-boxes">
+            <section id="mac" class="app-box">
+              <div class="app-box__inner">
+                <div class="app-box__inner-content">
+                  <p class="app-box__label">
+                    for editors
+                  </p>
+                  <h2 class="app-box__heading">
+                    Design on your Mac
+                  </h2>
+                  <p class="app-box__details">
+                    Design, prototype, and illustrate in a truly native macOS app, online or offline. Work in private or collaborate with others, in real time.
+                  </p>
+                </div>
+                <div class="app-box__cta-wrapper">
+                  <a class="app-box__cta button" href="#"
+                  >Download for macOS</a
+                >
+                <ul class="app-box__links flex">
+                  <li class="app-box__links-item flex flex-ai-c">
+                    <a href="" class="app-box__link">Browse old versions </a>
+                  </li>
+                  <li class="app-box__links-item flex flex-ai-c">
+                    <a href="" class="app-box__link">Download Beta </a>
+                  </li>
+                </ul>
+                </div>
+              </div>
+              <figure class="app-box__figure flex flex-jc-c">
+                <img src="images/macapp-image@4x (1).avif" alt="">
+                <img src="images/macapp-image@4x.avif" alt="" class="app-box__image-desktop">
+              </figure>
+            </section>
+            <section id="mac" class="app-box">
+              <div class="app-box__inner app-box__inner--web-app">
+                <div class="app-box__inner-content">
+                  <p class="app-box__label">
+                    for everyone
+                  </p>
+                  <h2 class="app-box__heading">
+                    Explore in your browser
+                  </h2>
+                  <p class="app-box__details">
+                    Browse documents, inspect designs, export assets, discuss feedback, manage users, and invite guests — on any computer, in any browser.
+                  </p>
+                </div>
+                <div class="app-box__cta-wrapper">
+                  <a class="app-box__cta button " href="#"
+                  >Open the web app</a
+                >
+          
+                </div>
+              </div>
+              <figure class="app-box__figure app-box__figure-web-app flex flex-jc-c">
+               <img src="images/mobile img.avif" alt="">
+                <img src="images/webapp-image@4x.avif" alt="" class="app-box__image-desktop">
+              </figure>
+            </section>
+            <section id="mac" class="app-box app-box__ios">
+              <div class="app-box__inner">
+                <div class="app-box__inner-content">
+                  <p class="app-box__label">
+                    for editors
+                  </p>
+                  <h2 class="app-box__heading">
+                    Preview on iPhone
+                  </h2>
+                  <p class="app-box__details">
+                    View your documents on the go, play prototypes on a real device, and mirror designs as you edit them on your Mac.
+                  </p>
+                </div>
+                <div class="app-box__cta-wrapper">
+                  <a class="app-box__cta button" href="#"
+                  >Download on apple store</a
+                >
+                <p class="app-box__hint">Our iPhone app works exclusively with Workspace documents.</p>
+                </div>
+              </div>
+              <figure class="app-box__figure flex flex-jc-c flex-ai-fd">
+                <img src="images/mobile img2.avif" alt="mobile image">
+                <img src="images/iphoneapp-image@4x.avif" alt="" class="app-box__image-desktop">
+              </figure>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__footer pad-viewport">
+        <div class="wrapper">
+          <section class="main-footer__content">
+            <nav class="main-footer__nav">
+              <div class="main-footer__nav-group">
+                <h3 class="main-footer__nav-heading flex flex-ai-c flex-jc-fs">
+                  Product
+                </h3>
+                <ul class="main-footer__nav-items">
+                  <li><a href="#" class="main-footer__nav-links">Design</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Collaborate</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Prototype</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Developer Handoff</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Workspaces</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Apps
+                    <span class="main-footer__nav-item-badge circle-two-container">
+                      3
+                    </span>
+                  </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Extensions</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Updates</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Pricing</a></li>
+                </ul>
+              </div>
+              <div class="main-footer__nav-group">
+                <h3 class="main-footer__nav-heading flex flex-ai-c flex-jc-fs">
+                  Why Sketch <span class="new-box-container main-footer__new-box-container">New</span>
+                </h3>
+                <ul class="main-footer__nav-items">
+                  <li><a href="#" class="main-footer__nav-links">Sketch vs Figma</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Sketch vs. Adobe XD</a></li>
+                </ul>
+              </div>
+              <div class="main-footer__nav-group">
+                <h3 class="main-footer__nav-heading flex flex-ai-c flex-jc-fs">
+                  Learn
+                </h3>
+                <ul class="main-footer__nav-items">
+                  <li><a href="#" class="main-footer__nav-links">Blog</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Course: Sketch 101 </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Documentation </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Events & Meetups </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Research Labs </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Developer Platform</a></li>
+              
+                </ul>
+              </div>
+              <div class="main-footer__nav-group">
+                <h3 class="main-footer__nav-heading flex flex-ai-c flex-jc-fs">
+                  Support
+                </h3>
+                <ul class="main-footer__nav-items">
+                  <li><a href="#" class="main-footer__nav-links">Help Center </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Contact Us</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Manage License</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Service Status </a></li>
+                </ul>
+              </div>
+              <div class="main-footer__nav-group">
+                <h3 class="main-footer__nav-heading flex flex-ai-c flex-jc-fs">
+                  Company
+                </h3>
+                <ul class="main-footer__nav-items">
+                  <li><a href="#" class="main-footer__nav-links">About Us  </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Careers
+                    <span class="main-footer__nav-item-badge circle-two-container">
+                      10
+                    </span>
+                  </a></li>
+                  <li><a href="#" class="main-footer__nav-links">Terms & Policies</a></li>
+                  <li><a href="#" class="main-footer__nav-links">Cookie Preferences </a></li>
+                </ul>
+              </div>
+            </nav>
+          </section>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
