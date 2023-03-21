@@ -19,7 +19,7 @@ const toggleBar = document.querySelector('#toggleBar');
 const body = document.body;
 const header = document.querySelector('.header');
 const fadeElems = document.querySelectorAll('.has-fade');
-// console.log(fadeElems);
+console.log(fadeElems);
 const ulContainer = document.querySelector('#headerNav');
 // console.log(ulContainer);
 let overLay = document.querySelector('.overlay');
