@@ -1,25 +1,7 @@
-// const button = document.querySelectorAll('.sub-nav-link');
-// // console.log(button);
-// document.addEventListener('DOMContentLoaded', function () {
-//   button.forEach(item => {
-//     item.addEventListener('mouseover', function () {
-//       const ul = item.nextElementSibling;
-//       ul.classList.remove('open');
-//     });
-//   });
-//   button.forEach(item => {
-//     item.addEventListener('mouseleave', function () {
-//       const ul = item.nextElementSibling;
-//       ul.classList.add('open');
-//     });
-//   });
-// });
-
 const toggleBar = document.querySelector('#toggleBar');
 const body = document.body;
 const header = document.querySelector('.header');
 const fadeElems = document.querySelectorAll('.has-fade');
-console.log(fadeElems);
 const ulContainer = document.querySelector('#headerNav');
 // console.log(ulContainer);
 let overLay = document.querySelector('.overlay');
