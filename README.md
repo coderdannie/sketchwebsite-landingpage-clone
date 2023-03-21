@@ -6,6 +6,7 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Author](#author)
 
 ## Overview
 
@@ -32,5 +33,5 @@ Sketch is the all-in-one platform for digital design — with collaborative desi
 - CSS Grid
 - Mobile-first workflow
 - Vanilla Javascript
-#Author
+##Author
 - Twitter - [click here](https://www.twitter.com/coderdannie)
